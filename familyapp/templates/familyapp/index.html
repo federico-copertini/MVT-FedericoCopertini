@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familia</title>
+</head>
+<body>
+    <b>Familia</b>
+    <table>
+        <thead>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Edad</td>
+            <td>Rol en la familia</td>
+            <td>fecha de nacimiento</td>
+        </thead>
+          {% for familiar in familiares %}
+          <tr>
+            <td>{{ familiar.nombre }}</td>
+            <td>{{ familiar.apellido }}</td>
+            <td>{{ familiar.edad }}</td>
+            <td>{{ familiar.get_rol_display}}</td>
+            <td>{{ familiar.fecha_de_nacimiento }}</td>
+            {% endfor %}
+          </tr>
+    </table>
+</body>
+</html>
